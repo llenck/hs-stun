@@ -22,7 +22,8 @@ library
                      , Network.Endian
   hs-source-dirs:      source
   build-depends:       base >= 4.5 && < 5
-                     , network >= 2.4
+                     , network >= 2.4 && < 3.2
+                     , network-bsd >= 2.7 && < 2.9
                      , transformers >= 0.3
                      , cereal >= 0.3
                      , bytestring >= 0.10
@@ -42,6 +43,7 @@ test-suite test-serialize
     hs-source-dirs: source
     build-depends: base >= 4.5
                  , network >= 2.4
+                 , network-bsd >= 2.7 && < 2.9
                  , transformers >= 0.3
                  , cereal >= 0.3
                  , bytestring >= 0.10

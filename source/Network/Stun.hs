@@ -154,5 +154,5 @@ findMappedAddress host localPort timeOuts = runErrorT $ do
         Just m' -> return m'
         Nothing -> throwError $ ProtocolError -- no mapped Address
     local <- liftIO $ S.getSocketName s
-    liftIO $ S.sClose  s
+    liftIO $ S.close  s
     return $ (m, local)
